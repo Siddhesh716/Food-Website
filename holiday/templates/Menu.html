@@ -1,0 +1,902 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, fantasy;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #666;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #clearCart,
+        #placeOrder {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        #clearCart:hover,
+        #placeOrder:hover {
+            background-color: #0056b3;
+        }
+
+        #add {
+            background-color: #333;
+        }
+
+        #add:hover {
+            background-color: #cfbcf8;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="automaticVala" href="{% url 'delete_table1'%}" style="display: none;"></a>
+    <header>
+        <h1>Welcome to Dining Delight</h1>
+    </header>
+    <form method="post" action="/Menu">{% csrf_token %}
+        <div id="cart">
+            <h2>Cart</h2>
+            <ul id="cartItems">
+            </ul>
+            <p>Total: <span id="cartTotal">$0.00</span></p>
+            <button id="clearCart">Clear Cart</button>
+            <button class="btn" id="placeOrder">Place Order</button>
+        </div>
+    </form>
+    <!-- Indian -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/indian_1.jfif" class="card-img-top" alt="Indian Food 1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Indian Food 1</h5>
+                        <p class="card-text">$15</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="0">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/indian_1.jfif" class="card-img-top" alt="Indian Food 2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Indian Food 2</h5>
+                        <p class="card-text">$18</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="1">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/indian_1.jfif" class="card-img-top" alt="Indian Food 3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Indian Food 3</h5>
+                        <p class="card-text">$19</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Italian -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/italian_1.jfif" class="card-img-top" alt="Italian Food 1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Italian Food 1</h5>
+                        <p class="card-text">$15</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="0">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/italian_1.jfif" class="card-img-top" alt="Italian Food 2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Italian Food 2</h5>
+                        <p class="card-text">$18</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="1">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/italian_1.jfif" class="card-img-top" alt="Italian Food 3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Italian Food 3</h5>
+                        <p class="card-text">$19</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chinese -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/chinese_1.jpg" class="card-img-top" alt="Chinese Food 1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Chinese Food 1</h5>
+                        <p class="card-text">$15</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="0">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/chinese_1.jpg" class="card-img-top" alt="Chinese Food 2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Chinese Food 2</h5>
+                        <p class="card-text">$18</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="1">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/chinese_1.jpg" class="card-img-top" alt="Chinese Food 3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Chinese Food 3</h5>
+                        <p class="card-text">$19</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- American -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/american_1.jfif" class="card-img-top" alt="American Food 1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">American Food 1</h5>
+                        <p class="card-text">$15</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="0">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/american_1.jfif" class="card-img-top" alt="American Food 2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">American Food 2</h5>
+                        <p class="card-text">$18</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="1">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/american_1.jfif" class="card-img-top" alt="American Food 3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">American Food 3</h5>
+                        <p class="card-text">$19</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- session expired -->
+    <button type="button" id="session_expired" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" style="display: none;"></button>
+
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel"
+                        style="margin: auto; color: red; font-weight: bold;">ALERT</h2>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    <b style="color: black;">SESSION IS EXPIRED !!!</b>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" id="session1" class="btn btn-primary" onclick="login_session1()"
+                        style="display:flex">EXIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-danger back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+        window.onscroll = function () {
+            let backToTopButton = document.querySelector(".back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        document.querySelector(".back-to-top").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <script>
+        document.getElementById('placeOrder').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = "{% url 'storage' %}";
+        });
+    </script>
+
+    <script>
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+        document.getElementById('clearCart').addEventListener('click', clearCart);
+    </script>
+
+    <script>
+        let cart = [];
+
+        function addToCart(item) {
+            const existingItemIndex = cart.findIndex(cartItem => cartItem.name === item.name);
+            if (existingItemIndex !== -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                item.quantity = 1;
+                cart.push(item);
+            }
+            updateCart();
+        }
+        const addButtons = document.querySelectorAll('.add');
+
+        addButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const price = parseFloat(button.parentElement.innerText.split('$')[1]);
+                const itemName = button.parentElement.previousElementSibling.alt;
+                const item = { name: itemName, price: price };
+                addToCart(item);
+            });
+        });
+        function removeFromCart(index) {
+            if (index >= 0 && index < cart.length) {
+                cart.splice(index, 1);
+                updateCart();
+            } else {
+                console.error("Invalid index:", index);
+            }
+        }
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+            cartItemsElement.innerHTML = '';
+            let cartTotal = 0;
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - Quantity: ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', () => {
+                    removeFromCart(index);
+                });
+                listItem.appendChild(removeButton);
+                cartItemsElement.appendChild(listItem);
+                cartTotal += item.price * item.quantity;
+            });
+            cartTotalElement.textContent = `$${cartTotal.toFixed(2)}`;
+        }
+        document.getElementById('placeOrder').addEventListener('click', () => {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = '/storage';
+        });
+    </script>
+
+    <script>
+        var idleTime = 0;
+        var idleInterval = setInterval(timerIncrement, 90000);
+        $(document).ready(function () {
+            $(document).on('mousemove keypress wheel touchstart touchmove  touchend', function () {
+                resetIdleTime();
+            });
+        });
+        function resetIdleTime() {
+            idleTime = 0;
+        }
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+            if (idleTime > 14) {
+                $('#staticBackdrop').modal('show');
+                clearInterval(idleInterval);
+                sessionStorage.setItem('sessionExpired', 'true');
+            }
+        }
+        $(document).ready(function () {
+            var sessionExpired = sessionStorage.getItem('sessionExpired') === 'true';
+            if (sessionExpired) {
+                sessionStorage.removeItem('sessionExpired');
+                $('#staticBackdrop').modal('hide');
+                window.location.href = "{% url 'logout' %}";
+            }
+        });
+        $('#staticBackdrop').on('hidden.bs.modal', function () {
+            resetIdleTime();
+        });
+        function login_session1() {
+            window.location.href = "{% url 'logout' %}";
+        }
+    </script>
+
+    <script>
+        var now = new Date();
+        var startHour = 9;
+        var startMinute = 0;
+        var endHour = 9;
+        var endMinute = 5;
+        var startMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute, 0, 0) - now;
+        var endMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute, 0, 0) - now;
+        if (startMillis < 0) {
+            startMillis += 86400000;
+        }
+        if (endMillis < 0) {
+            endMillis += 86400000;
+        }
+        setTimeout(function () { document.getElementById("automaticVala").click() }, startMillis);
+        setTimeout(function () { document.getElementById("automaticVala").click() }, endMillis);
+    </script>
+
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, fantasy;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #666;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #clearCart,
+        #placeOrder {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        #clearCart:hover,
+        #placeOrder:hover {
+            background-color: #0056b3;
+        }
+
+        #add {
+            background-color: #333;
+        }
+
+        #add:hover {
+            background-color: #cfbcf8;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="automaticVala" href="{% url 'delete_table1'%}" style="display: none;"></a>
+    <header>
+        <h1>Welcome to Dining Delight</h1>
+    </header>
+    <form method="post" action="/Menu">{% csrf_token %}
+        <div id="cart">
+            <h2>Cart</h2>
+            <ul id="cartItems">
+            </ul>
+            <p>Total: <span id="cartTotal">$0.00</span></p>
+            <button id="clearCart">Clear Cart</button>
+            <button class="btn" id="placeOrder">Place Order</button>
+        </div>
+    </form>
+    <!-- Indian -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/indian_1.jfif" class="card-img-top" alt="Indian Food 1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Indian Food 1</h5>
+                        <p class="card-text">$15</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="0">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/indian_1.jfif" class="card-img-top" alt="Indian Food 2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Indian Food 2</h5>
+                        <p class="card-text">$18</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="1">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/indian_1.jfif" class="card-img-top" alt="Indian Food 3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Indian Food 3</h5>
+                        <p class="card-text">$19</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Italian -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/italian_1.jfif" class="card-img-top" alt="Italian Food 1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Italian Food 1</h5>
+                        <p class="card-text">$15</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="0">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/italian_1.jfif" class="card-img-top" alt="Italian Food 2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Italian Food 2</h5>
+                        <p class="card-text">$18</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="1">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/italian_1.jfif" class="card-img-top" alt="Italian Food 3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Italian Food 3</h5>
+                        <p class="card-text">$19</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chinese -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/chinese_1.jpg" class="card-img-top" alt="Chinese Food 1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Chinese Food 1</h5>
+                        <p class="card-text">$15</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="0">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/chinese_1.jpg" class="card-img-top" alt="Chinese Food 2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Chinese Food 2</h5>
+                        <p class="card-text">$18</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="1">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/chinese_1.jpg" class="card-img-top" alt="Chinese Food 3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">Chinese Food 3</h5>
+                        <p class="card-text">$19</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- American -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/american_1.jfif" class="card-img-top" alt="American Food 1">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">American Food 1</h5>
+                        <p class="card-text">$15</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="0">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/american_1.jfif" class="card-img-top" alt="American Food 2">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">American Food 2</h5>
+                        <p class="card-text">$18</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="1">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static/american_1.jfif" class="card-img-top" alt="American Food 3">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">American Food 3</h5>
+                        <p class="card-text">$19</p>
+                        <button id="add" class="btn btn-primary add" data-quantity="2">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- session expired -->
+    <button type="button" id="session_expired" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" style="display: none;"></button>
+
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel"
+                        style="margin: auto; color: red; font-weight: bold;">ALERT</h2>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    <b style="color: black;">SESSION IS EXPIRED !!!</b>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" id="session1" class="btn btn-primary" onclick="login_session1()"
+                        style="display:flex">EXIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-danger back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+        window.onscroll = function () {
+            let backToTopButton = document.querySelector(".back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        document.querySelector(".back-to-top").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <script>
+        document.getElementById('placeOrder').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = "{% url 'storage' %}";
+        });
+    </script>
+
+    <script>
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+        document.getElementById('clearCart').addEventListener('click', clearCart);
+    </script>
+
+    <script>
+        let cart = [];
+
+        function addToCart(item) {
+            const existingItemIndex = cart.findIndex(cartItem => cartItem.name === item.name);
+            if (existingItemIndex !== -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                item.quantity = 1;
+                cart.push(item);
+            }
+            updateCart();
+        }
+        const addButtons = document.querySelectorAll('.add');
+
+        addButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const price = parseFloat(button.parentElement.innerText.split('$')[1]);
+                const itemName = button.parentElement.previousElementSibling.alt;
+                const item = { name: itemName, price: price };
+                addToCart(item);
+            });
+        });
+        function removeFromCart(index) {
+            if (index >= 0 && index < cart.length) {
+                cart.splice(index, 1);
+                updateCart();
+            } else {
+                console.error("Invalid index:", index);
+            }
+        }
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+            cartItemsElement.innerHTML = '';
+            let cartTotal = 0;
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - Quantity: ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', () => {
+                    removeFromCart(index);
+                });
+                listItem.appendChild(removeButton);
+                cartItemsElement.appendChild(listItem);
+                cartTotal += item.price * item.quantity;
+            });
+            cartTotalElement.textContent = `$${cartTotal.toFixed(2)}`;
+        }
+        document.getElementById('placeOrder').addEventListener('click', () => {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = '/storage';
+        });
+    </script>
+
+    <script>
+        var idleTime = 0;
+        var idleInterval = setInterval(timerIncrement, 90000);
+        $(document).ready(function () {
+            $(document).on('mousemove keypress wheel touchstart touchmove  touchend', function () {
+                resetIdleTime();
+            });
+        });
+        function resetIdleTime() {
+            idleTime = 0;
+        }
+        function timerIncrement() {
+            idleTime = idleTime + 1;
+            if (idleTime > 14) {
+                $('#staticBackdrop').modal('show');
+                clearInterval(idleInterval);
+                sessionStorage.setItem('sessionExpired', 'true');
+            }
+        }
+        $(document).ready(function () {
+            var sessionExpired = sessionStorage.getItem('sessionExpired') === 'true';
+            if (sessionExpired) {
+                sessionStorage.removeItem('sessionExpired');
+                $('#staticBackdrop').modal('hide');
+                window.location.href = "{% url 'logout' %}";
+            }
+        });
+        $('#staticBackdrop').on('hidden.bs.modal', function () {
+            resetIdleTime();
+        });
+        function login_session1() {
+            window.location.href = "{% url 'logout' %}";
+        }
+    </script>
+
+    <script>
+        var now = new Date();
+        var startHour = 9;
+        var startMinute = 0;
+        var endHour = 9;
+        var endMinute = 5;
+        var startMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute, 0, 0) - now;
+        var endMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute, 0, 0) - now;
+        if (startMillis < 0) {
+            startMillis += 86400000;
+        }
+        if (endMillis < 0) {
+            endMillis += 86400000;
+        }
+        setTimeout(function () { document.getElementById("automaticVala").click() }, startMillis);
+        setTimeout(function () { document.getElementById("automaticVala").click() }, endMillis);
+    </script>
+
+</body>
+
+>>>>>>> 591af9b (Initial commit)
+</html>

@@ -1,0 +1,86 @@
+<<<<<<< HEAD
+# select suid,contact_no from MIS_POINT where suid = '4/12/4/65A_U/G/145_1' // - null value and another contact_no
+# select suid,count(*) from MIS_POINT group by suid having count(*)>1 // to find multiple suid
+
+# insertion query
+insert into mis_point_kdmc(suid, contact_no) values ('5/16/9/99P_I/B/1_6','9999999999') 
+
+# updation query
+update mis_point set suid='NEW' where suid='OLD' // to update the ongoing db
+
+# deletion query
+delete from mis_point where suid='4/12/4/60M_P/T/7_1' // to delete data from db
+
+# update the type of column
+ALTER TABLE mis_point_kdmc
+ALTER COLUMN contact_no TYPE VARCHAR(50)
+
+#ALTER TABLE MIS_POINT
+ADD COLUMN time TIME WITHOUT TIME ZONE;
+
+
+# delete column from table
+ALTER TABLE mis_point
+Drop COLUMN current_login_suid
+Drop COLUMN login_counter,
+Drop COLUMN last_login_time
+
+# change name of column
+ALTER TABLE table_name
+RENAME COLUMN old_column_name TO new_column_name;
+
+# create table query
+CREATE TABLE login_data (
+    id SERIAL PRIMARY KEY,
+    username TEXT,
+    password TEXT
+);
+
+INSERT INTO image(image,title,description) values('static/american.jfif','Chinese Cuisine','Delicious and flavorful dishes from the diverse regions of India.');
+select * from image
+
+
+UPDATE image
+SET title = 'American Cuisine'
+WHERE image = 'static/american.jfif';
+=======
+# select suid,contact_no from MIS_POINT where suid = '4/12/4/65A_U/G/145_1' // - null value and another contact_no
+# select suid,count(*) from MIS_POINT group by suid having count(*)>1 // to find multiple suid
+
+
+# insert into mis_point_kdmc(suid, contact_no) values ('5/16/9/99P_I/B/1_6','9999999999') 
+# update mis_point set suid='NEW' where suid='OLD' // to update the ongoing db
+# delete from mis_point where suid='4/12/4/60M_P/T/7_1' // to delete data from db
+# update the type of column
+-- ALTER TABLE mis_point_kdmc
+-- ALTER COLUMN contact_no TYPE VARCHAR(50)
+
+#ALTER TABLE MIS_POINT
+#ADD COLUMN last_login_time TIME WITHOUT TIME ZONE;
+
+
+# delete column from table
+-- ALTER TABLE mis_point
+-- Drop COLUMN current_login_suid
+-- Drop COLUMN login_counter,
+-- Drop COLUMN last_login_time
+
+# change name of column
+ALTER TABLE table_name
+RENAME COLUMN old_column_name TO new_column_name;
+
+# create table
+CREATE TABLE login_data (
+    id SERIAL PRIMARY KEY,
+    username TEXT,
+    password TEXT
+);
+
+
+
+
+
+
+
+
+>>>>>>> 591af9b (Initial commit)

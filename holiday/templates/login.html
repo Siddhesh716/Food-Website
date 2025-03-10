@@ -1,0 +1,382 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, fantasy;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(100deg, #FF8C00, #FF6347, #7B68EE, #4682B4);
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-link a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .messages {
+            margin-bottom: 20px;
+            color: red;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+                height: auto;
+            }
+
+            .container {
+                width: 100%;
+                margin: 20px;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            input[type="submit"] {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .signup-link {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h2 {
+                font-size: 20px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            input[type="submit"] {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .signup-link {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a id="automaticVala" href="{% url 'delete_table1'%}" style="display: none;"></a>
+    <div class="container">
+        <h2>LOGIN</h2>
+        <div class="messages">
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <form action="/login_2" method="POST">{% csrf_token %}
+            <label for="username">USERNAME</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+            <div class="signup-link">
+                Don't have an account? <a href="/signup">Sign Up</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        var now = new Date();
+        var startHour = 9;
+        var startMinute = 0;
+        var endHour = 9;
+        var endMinute = 5;
+        var startMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute, 0, 0) - now;
+        var endMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute, 0, 0) - now;
+        if (startMillis < 0) {
+            startMillis += 86400000;
+        }
+        if (endMillis < 0) {
+            endMillis += 86400000;
+        }
+        setTimeout(function () { document.getElementById("automaticVala").click() }, startMillis);
+        setTimeout(function () { document.getElementById("automaticVala").click() }, endMillis);
+    </script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, fantasy;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(100deg, #FF8C00, #FF6347, #7B68EE, #4682B4);
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-link a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .messages {
+            margin-bottom: 20px;
+            color: red;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+                height: auto;
+            }
+
+            .container {
+                width: 100%;
+                margin: 20px;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            input[type="submit"] {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .signup-link {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h2 {
+                font-size: 20px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            input[type="submit"] {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .signup-link {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a id="automaticVala" href="{% url 'delete_table1'%}" style="display: none;"></a>
+    <div class="container">
+        <h2>LOGIN</h2>
+        <div class="messages">
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <form action="/login_2" method="POST">{% csrf_token %}
+            <label for="username">USERNAME</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+            <div class="signup-link">
+                Don't have an account? <a href="/signup">Sign Up</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        var now = new Date();
+        var startHour = 9;
+        var startMinute = 0;
+        var endHour = 9;
+        var endMinute = 5;
+        var startMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute, 0, 0) - now;
+        var endMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute, 0, 0) - now;
+        if (startMillis < 0) {
+            startMillis += 86400000;
+        }
+        if (endMillis < 0) {
+            endMillis += 86400000;
+        }
+        setTimeout(function () { document.getElementById("automaticVala").click() }, startMillis);
+        setTimeout(function () { document.getElementById("automaticVala").click() }, endMillis);
+    </script>
+</body>
+
+>>>>>>> 591af9b (Initial commit)
+</html>

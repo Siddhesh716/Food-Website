@@ -1,0 +1,492 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Process</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, fantasy;
+      margin: 0;
+      padding: 20px;
+      background-color: gray;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-top: 7vh;
+    }
+
+    h2 {
+      color: black;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: black;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    input[type="text"] {
+      text-transform: uppercase;
+    }
+
+    input[type="number"] {
+      appearance: textfield;
+    }
+
+    input[type="text"]:not(#card_holder_name) {
+      text-transform: uppercase;
+    }
+
+    input[type="number"]:not(#card_number),
+    input[type="text"]:not(#expiry-date),
+    input[type="number"]:not(#cvc) {
+      appearance: none;
+      -moz-appearance: textfield;
+      -webkit-appearance: none;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: black;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    input[type="submit"] {
+      background-color: red;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: black;
+    }
+
+    .messages {
+      margin-bottom: 20px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <a id="automaticVala" href="{% url 'delete_table1'%}" style="display: none;"></a>
+
+  <div class="container">
+    <h2>PAYMENT PROCESS</h2>
+    <div class="messages">
+      {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <form action="/payment13" method="POST">{% csrf_token %}
+      <label for="card_name">CARD HOLDER NAME</label>
+      <input type="text" id="card_name" name="card_name" pattern="[A-Za-z\s]+"
+        title="Cardholder Name should contain only Alphabets and Spaces" required>
+
+      <label for="card_no">CARD NUMBER</label>
+      <input type="text" id="card_no" name="card_no" pattern="\d{15,16}"
+        title="Card Number should contain 15 or 16 digits" required>
+
+      <label for="date">EXPIRY DATE</label>
+      <input type="text" id="date" name="date" pattern="\d{2}/\d{2}"
+        title="Enter your valid Expiry Date in MM/YY Format" required>
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" pattern="\d{3}" title="Enter your 3-Digit CVV Number" required>
+
+      <label for="username">USERNAME</label>
+      <input type="text" id="username" name="username" title="Enter your Registered Username" required>
+
+      <input type="submit" value="PAY NOW">
+    </form>
+    <!-- session expired -->
+    <button type="button" id="session_expired" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop" style="display: none;"></button>
+
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="staticBackdropLabel" style="margin: auto; color: red; font-weight: bold;">
+              ALERT</h2>
+          </div>
+          <div class="modal-body" style="text-align: center;">
+            <b style="color: black;">SESSION IS EXPIRED !!!</b>
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" id="session1" class="btn btn-primary" onclick="login_session1()"
+              style="display:flex">EXIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var idleTime = 0;
+    var idleInterval = setInterval(timerIncrement, 90000);
+    $(document).ready(function () {
+      $(document).on('mousemove keypress wheel touchstart touchmove touchend', function () {
+        resetIdleTime();
+      });
+    });
+    function resetIdleTime() {
+      idleTime = 0;
+    }
+    function timerIncrement() {
+      idleTime = idleTime + 1;
+      if (idleTime > 14) {
+        $('#staticBackdrop').modal('show');
+        clearInterval(idleInterval);
+        sessionStorage.setItem('sessionExpired', 'true');
+      }
+    }
+    $(document).ready(function () {
+      var sessionExpired = sessionStorage.getItem('sessionExpired') === 'true';
+      if (sessionExpired) {
+        sessionStorage.removeItem('sessionExpired');
+        $('#staticBackdrop').modal('hide');
+        window.location.href = "{% url 'logout' %}";
+      }
+    });
+    $('#staticBackdrop').on('hidden.bs.modal', function () {
+      resetIdleTime();
+    });
+    function login_session1() {
+      window.location.href = "{% url 'logout' %}";
+    }
+  </script>
+
+  <script>
+    var now = new Date();
+    var startHour = 9;
+    var startMinute = 0;
+    var endHour = 9;
+    var endMinute = 5;
+    var startMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute, 0, 0) - now;
+    var endMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute, 0, 0) - now;
+    if (startMillis < 0) {
+      startMillis += 86400000;
+    }
+    if (endMillis < 0) {
+      endMillis += 86400000;
+    }
+    setTimeout(function () { document.getElementById("automaticVala").click() }, startMillis);
+    setTimeout(function () { document.getElementById("automaticVala").click() }, endMillis);
+  </script>
+
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Process</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, fantasy;
+      margin: 0;
+      padding: 20px;
+      background-color: gray;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-top: 7vh;
+    }
+
+    h2 {
+      color: black;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: black;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    input[type="text"] {
+      text-transform: uppercase;
+    }
+
+    input[type="number"] {
+      appearance: textfield;
+    }
+
+    input[type="text"]:not(#card_holder_name) {
+      text-transform: uppercase;
+    }
+
+    input[type="number"]:not(#card_number),
+    input[type="text"]:not(#expiry-date),
+    input[type="number"]:not(#cvc) {
+      appearance: none;
+      -moz-appearance: textfield;
+      -webkit-appearance: none;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: black;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    input[type="submit"] {
+      background-color: red;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: black;
+    }
+
+    .messages {
+      margin-bottom: 20px;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <a id="automaticVala" href="{% url 'delete_table1'%}" style="display: none;"></a>
+
+  <div class="container">
+    <h2>PAYMENT PROCESS</h2>
+    <div class="messages">
+      {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <form action="/payment13" method="POST">{% csrf_token %}
+      <label for="card_name">CARD HOLDER NAME</label>
+      <input type="text" id="card_name" name="card_name" pattern="[A-Za-z\s]+"
+        title="Cardholder Name should contain only Alphabets and Spaces" required>
+
+      <label for="card_no">CARD NUMBER</label>
+      <input type="text" id="card_no" name="card_no" pattern="\d{15,16}"
+        title="Card Number should contain 15 or 16 digits" required>
+
+      <label for="date">EXPIRY DATE</label>
+      <input type="text" id="date" name="date" pattern="\d{2}/\d{2}"
+        title="Enter your valid Expiry Date in MM/YY Format" required>
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" pattern="\d{3}" title="Enter your 3-Digit CVV Number" required>
+
+      <label for="username">USERNAME</label>
+      <input type="text" id="username" name="username" title="Enter your Registered Username" required>
+
+      <input type="submit" value="PAY NOW">
+    </form>
+    <!-- session expired -->
+    <button type="button" id="session_expired" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop" style="display: none;"></button>
+
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="staticBackdropLabel" style="margin: auto; color: red; font-weight: bold;">
+              ALERT</h2>
+          </div>
+          <div class="modal-body" style="text-align: center;">
+            <b style="color: black;">SESSION IS EXPIRED !!!</b>
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" id="session1" class="btn btn-primary" onclick="login_session1()"
+              style="display:flex">EXIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var idleTime = 0;
+    var idleInterval = setInterval(timerIncrement, 90000);
+    $(document).ready(function () {
+      $(document).on('mousemove keypress wheel touchstart touchmove touchend', function () {
+        resetIdleTime();
+      });
+    });
+    function resetIdleTime() {
+      idleTime = 0;
+    }
+    function timerIncrement() {
+      idleTime = idleTime + 1;
+      if (idleTime > 14) {
+        $('#staticBackdrop').modal('show');
+        clearInterval(idleInterval);
+        sessionStorage.setItem('sessionExpired', 'true');
+      }
+    }
+    $(document).ready(function () {
+      var sessionExpired = sessionStorage.getItem('sessionExpired') === 'true';
+      if (sessionExpired) {
+        sessionStorage.removeItem('sessionExpired');
+        $('#staticBackdrop').modal('hide');
+        window.location.href = "{% url 'logout' %}";
+      }
+    });
+    $('#staticBackdrop').on('hidden.bs.modal', function () {
+      resetIdleTime();
+    });
+    function login_session1() {
+      window.location.href = "{% url 'logout' %}";
+    }
+  </script>
+
+  <script>
+    var now = new Date();
+    var startHour = 9;
+    var startMinute = 0;
+    var endHour = 9;
+    var endMinute = 5;
+    var startMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute, 0, 0) - now;
+    var endMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute, 0, 0) - now;
+    if (startMillis < 0) {
+      startMillis += 86400000;
+    }
+    if (endMillis < 0) {
+      endMillis += 86400000;
+    }
+    setTimeout(function () { document.getElementById("automaticVala").click() }, startMillis);
+    setTimeout(function () { document.getElementById("automaticVala").click() }, endMillis);
+  </script>
+
+</body>
+
+>>>>>>> 591af9b (Initial commit)
+</html>

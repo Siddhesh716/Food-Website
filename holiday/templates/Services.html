@@ -1,0 +1,430 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, fantasy;
+      margin: 0;
+      padding: 0;
+      background-color: gray;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 6vh auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+      font-weight: 700;
+    }
+
+    .service {
+      margin-bottom: 40px;
+    }
+
+    .service h2 {
+      color: black;
+    }
+
+    .service p {
+      color: black;
+      font-size: 13px;
+      font-family: Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <a id="automaticVala" href="{% url 'delete_table1'%}" style="display: none;"></a>
+
+  <div class="container">
+    <h1>OUR SERVICES</h1>
+
+    <div class="service">
+      <h2>Dining Experience</h2>
+      <p>Indulge in a culinary journey like no other with our exquisite dining experience. From cozy candlelit
+        dinners to vibrant family gatherings, our restaurant offers a warm and inviting ambiance for all
+        occasions.</p>
+    </div>
+
+    <div class="service">
+      <h2>Catering Services</h2>
+      <p>Impress your guests with our top-notch catering services. Whether it's a corporate event, wedding
+        reception, or private party, our skilled chefs and attentive staff will ensure that every detail is
+        meticulously executed, leaving a lasting impression on your guests.</p>
+    </div>
+
+    <div class="service">
+      <h2>Takeout & Delivery</h2>
+      <p>Enjoy our delectable dishes from the comfort of your home with our convenient takeout and delivery
+        services. Simply place your order online or give us a call, and we'll have your favorite meals prepared
+        fresh and delivered right to your doorstep.</p>
+    </div>
+
+    <div class="service">
+      <h2>Private Events</h2>
+      <p>Host your next event with us and let our experienced team take care of all the details. Whether it's a
+        birthday celebration, anniversary party, or business meeting, our versatile event spaces and
+        personalized service will exceed your expectations.</p>
+    </div>
+
+    <div class="service">
+      <h2>Cooking Classes</h2>
+      <p>Embark on a culinary adventure with our interactive cooking classes. Learn from our expert chefs as they
+        share their secrets and techniques for creating mouthwatering dishes. Perfect for aspiring chefs and
+        food enthusiasts of all skill levels.</p>
+    </div>
+
+    <div class="service">
+      <h2>Wine Tasting Events</h2>
+      <p>Explore the world of wine with our exclusive wine tasting events. Sample a curated selection of fine
+        wines paired perfectly with our gourmet cuisine. Expand your palate and discover new favorites in a
+        sophisticated yet relaxed setting.</p>
+    </div>
+    <!-- session expired -->
+    <button type="button" id="session_expired" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop" style="display: none;"></button>
+
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="staticBackdropLabel" style="margin: auto; color: red;">ALERT</h2>
+          </div>
+          <div class="modal-body" style="text-align: center;">
+            <b style="color: black;">SESSION IS EXPIRED !!!</b>
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" id="session1" class="btn btn-primary" onclick="login_session1()"
+              style="display:flex">EXIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var idleTime = 0;
+    var idleInterval = setInterval(timerIncrement, 90000);
+    $(document).ready(function () {
+      $(document).on('mousemove keypress wheel touchstart touchmove  touchend', function () {
+        resetIdleTime();
+      });
+    });
+    function resetIdleTime() {
+      idleTime = 0;
+    }
+    function timerIncrement() {
+      idleTime = idleTime + 1;
+      if (idleTime > 14) {
+        $('#staticBackdrop').modal('show');
+        clearInterval(idleInterval);
+        sessionStorage.setItem('sessionExpired', 'true');
+      }
+    }
+    $(document).ready(function () {
+      var sessionExpired = sessionStorage.getItem('sessionExpired') === 'true';
+      if (sessionExpired) {
+        sessionStorage.removeItem('sessionExpired');
+        $('#staticBackdrop').modal('hide');
+        window.location.href = "{% url 'logout' %}";
+      }
+    });
+
+
+    $('#staticBackdrop').on('hidden.bs.modal', function () {
+      resetIdleTime();
+    });
+
+    function login_session1() {
+      window.location.href = "{% url 'logout' %}";
+    }
+  </script>
+
+  <script>
+    var now = new Date();
+    var startHour = 11;
+    var startMinute = 0;
+    var endHour = 11;
+    var endMinute = 5;
+    var startMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute, 0, 0) - now;
+    var endMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute, 0, 0) - now;
+    if (startMillis < 0) {
+      startMillis += 86400000;
+    }
+    if (endMillis < 0) {
+      endMillis += 86400000;
+    }
+    setTimeout(function () { document.getElementById("automaticVala").click() }, startMillis);
+    setTimeout(function () { document.getElementById("automaticVala").click() }, endMillis);
+  </script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, fantasy;
+      margin: 0;
+      padding: 0;
+      background-color: gray;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 6vh auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+      font-weight: 700;
+    }
+
+    .service {
+      margin-bottom: 40px;
+    }
+
+    .service h2 {
+      color: black;
+    }
+
+    .service p {
+      color: black;
+      font-size: 13px;
+      font-family: Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <a id="automaticVala" href="{% url 'delete_table1'%}" style="display: none;"></a>
+
+  <div class="container">
+    <h1>OUR SERVICES</h1>
+
+    <div class="service">
+      <h2>Dining Experience</h2>
+      <p>Indulge in a culinary journey like no other with our exquisite dining experience. From cozy candlelit
+        dinners to vibrant family gatherings, our restaurant offers a warm and inviting ambiance for all
+        occasions.</p>
+    </div>
+
+    <div class="service">
+      <h2>Catering Services</h2>
+      <p>Impress your guests with our top-notch catering services. Whether it's a corporate event, wedding
+        reception, or private party, our skilled chefs and attentive staff will ensure that every detail is
+        meticulously executed, leaving a lasting impression on your guests.</p>
+    </div>
+
+    <div class="service">
+      <h2>Takeout & Delivery</h2>
+      <p>Enjoy our delectable dishes from the comfort of your home with our convenient takeout and delivery
+        services. Simply place your order online or give us a call, and we'll have your favorite meals prepared
+        fresh and delivered right to your doorstep.</p>
+    </div>
+
+    <div class="service">
+      <h2>Private Events</h2>
+      <p>Host your next event with us and let our experienced team take care of all the details. Whether it's a
+        birthday celebration, anniversary party, or business meeting, our versatile event spaces and
+        personalized service will exceed your expectations.</p>
+    </div>
+
+    <div class="service">
+      <h2>Cooking Classes</h2>
+      <p>Embark on a culinary adventure with our interactive cooking classes. Learn from our expert chefs as they
+        share their secrets and techniques for creating mouthwatering dishes. Perfect for aspiring chefs and
+        food enthusiasts of all skill levels.</p>
+    </div>
+
+    <div class="service">
+      <h2>Wine Tasting Events</h2>
+      <p>Explore the world of wine with our exclusive wine tasting events. Sample a curated selection of fine
+        wines paired perfectly with our gourmet cuisine. Expand your palate and discover new favorites in a
+        sophisticated yet relaxed setting.</p>
+    </div>
+    <!-- session expired -->
+    <button type="button" id="session_expired" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop" style="display: none;"></button>
+
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: rgba(0, 0, 0, 0.5);">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="staticBackdropLabel" style="margin: auto; color: red;">ALERT</h2>
+          </div>
+          <div class="modal-body" style="text-align: center;">
+            <b style="color: black;">SESSION IS EXPIRED !!!</b>
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" id="session1" class="btn btn-primary" onclick="login_session1()"
+              style="display:flex">EXIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var idleTime = 0;
+    var idleInterval = setInterval(timerIncrement, 90000);
+    $(document).ready(function () {
+      $(document).on('mousemove keypress wheel touchstart touchmove  touchend', function () {
+        resetIdleTime();
+      });
+    });
+    function resetIdleTime() {
+      idleTime = 0;
+    }
+    function timerIncrement() {
+      idleTime = idleTime + 1;
+      if (idleTime > 14) {
+        $('#staticBackdrop').modal('show');
+        clearInterval(idleInterval);
+        sessionStorage.setItem('sessionExpired', 'true');
+      }
+    }
+    $(document).ready(function () {
+      var sessionExpired = sessionStorage.getItem('sessionExpired') === 'true';
+      if (sessionExpired) {
+        sessionStorage.removeItem('sessionExpired');
+        $('#staticBackdrop').modal('hide');
+        window.location.href = "{% url 'logout' %}";
+      }
+    });
+
+
+    $('#staticBackdrop').on('hidden.bs.modal', function () {
+      resetIdleTime();
+    });
+
+    function login_session1() {
+      window.location.href = "{% url 'logout' %}";
+    }
+  </script>
+
+  <script>
+    var now = new Date();
+    var startHour = 11;
+    var startMinute = 0;
+    var endHour = 11;
+    var endMinute = 5;
+    var startMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), startHour, startMinute, 0, 0) - now;
+    var endMillis = new Date(now.getFullYear(), now.getMonth(), now.getDate(), endHour, endMinute, 0, 0) - now;
+    if (startMillis < 0) {
+      startMillis += 86400000;
+    }
+    if (endMillis < 0) {
+      endMillis += 86400000;
+    }
+    setTimeout(function () { document.getElementById("automaticVala").click() }, startMillis);
+    setTimeout(function () { document.getElementById("automaticVala").click() }, endMillis);
+  </script>
+</body>
+
+>>>>>>> 591af9b (Initial commit)
+</html>

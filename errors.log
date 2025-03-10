@@ -1,0 +1,883 @@
+<<<<<<< HEAD
+2024-07-06 12:46:58,376 ERROR decorators An error occurred in view Menu: name 'bhbkjnjn' is not defined
+2024-07-06 12:46:58,376 ERROR log Internal Server Error: /Menu
+2024-07-06 12:46:58,377 ERROR basehttp "GET /Menu HTTP/1.1" 500 33
+2024-07-08 11:27:08,455 ERROR log Internal Server Error: /Dashboard
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view holiday.views.Dashboard didn't return an HttpResponse object. It returned None instead.
+2024-07-08 11:27:08,455 ERROR basehttp "GET /Dashboard HTTP/1.1" 500 70644
+2024-07-08 11:40:14,029 ERROR decorators An error occurred in view otp_expire: name 'otp' is not defined
+2024-07-08 11:40:14,029 ERROR log Internal Server Error: /otp_expire
+2024-07-08 11:40:14,029 ERROR basehttp "GET /otp_expire HTTP/1.1" 500 33
+2024-07-08 11:42:48,253 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-08 11:42:48,253 ERROR log Internal Server Error: /Dashboard
+2024-07-08 11:42:48,254 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-08 11:42:50,208 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-08 11:42:50,208 ERROR log Internal Server Error: /Dashboard
+2024-07-08 11:42:50,208 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-08 11:42:51,183 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-08 11:42:51,183 ERROR log Internal Server Error: /Dashboard
+2024-07-08 11:42:51,183 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-08 11:43:15,268 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-08 11:43:15,268 ERROR log Internal Server Error: /Dashboard
+2024-07-08 11:43:15,268 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-08 15:10:33,560 ERROR decorators An error occurred in view payment13: payment13() missing 1 required positional argument: 'username'
+2024-07-08 15:10:33,560 ERROR log Internal Server Error: /payment13
+2024-07-08 15:10:33,560 ERROR basehttp "GET /payment13 HTTP/1.1" 500 33
+2024-07-08 16:15:47,383 ERROR decorators An error occurred in view payment13: name 'mobile' is not defined
+2024-07-08 16:15:47,383 ERROR log Internal Server Error: /payment13
+2024-07-08 16:15:47,383 ERROR basehttp "POST /payment13 HTTP/1.1" 500 33
+2024-07-09 12:21:06,047 ERROR decorators An error occurred in view payment13: name 'mobile' is not defined
+2024-07-09 12:21:06,048 ERROR log Internal Server Error: /payment13
+2024-07-09 12:21:06,048 ERROR basehttp "POST /payment13 HTTP/1.1" 500 33
+2024-07-12 11:01:58,447 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:01:58,447 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:01:58,447 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:16,643 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:16,643 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:16,643 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:23,522 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:23,522 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:23,522 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:23,929 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:23,929 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:23,929 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:32,993 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:32,993 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:32,993 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:51,971 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:51,971 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:51,971 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-15 17:22:39,289 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:24:14,021 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:26:01,308 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:26:09,425 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:27:38,201 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:33:33,010 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:34:11,470 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:36:06,169 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:37:32,107 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:44:28,468 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:47:53,493 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:49:50,020 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:51:27,365 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:56:04,824 ERROR decorators An error occurred in view payment13: _wrapped_view() missing 1 required positional argument: 'request'
+2024-07-15 17:56:04,824 ERROR log Internal Server Error: /payment13
+2024-07-15 17:56:04,825 ERROR basehttp "POST /payment13 HTTP/1.1" 500 33
+2024-07-15 17:57:10,664 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:58:09,413 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-15 17:58:09,413 ERROR log Internal Server Error: /Dashboard
+2024-07-15 17:58:09,414 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-15 17:58:10,618 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-15 17:58:10,618 ERROR log Internal Server Error: /Dashboard
+2024-07-15 17:58:10,618 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-15 17:58:44,473 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 09:57:49,421 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:04:19,009 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:06:13,388 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-16 10:06:13,388 ERROR log Internal Server Error: /Dashboard
+2024-07-16 10:06:13,388 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-16 10:06:39,548 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:08:27,366 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:10:32,908 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:33:58,113 ERROR decorators An error occurred in view otp_expire: name 'otp' is not defined
+2024-07-16 10:33:58,113 ERROR log Internal Server Error: /otp_expire
+2024-07-16 10:33:58,113 ERROR basehttp "GET /otp_expire HTTP/1.1" 500 33
+2024-07-16 11:10:11,336 ERROR decorators An error occurred in view payment13: payment13.html
+2024-07-16 11:10:11,336 ERROR log Internal Server Error: /payment13
+2024-07-16 11:10:11,336 ERROR basehttp "POST /payment13 HTTP/1.1" 500 33
+2024-07-16 11:11:15,590 ERROR log Internal Server Error: /payment13
+Traceback (most recent call last):
+  File "D:\project\harshada\holiday\views.py", line 156, in payment13
+    user = Sign_up.objects.using("project_user").get(username=username)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+holiday.models.Sign_up.DoesNotExist: Sign_up matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 159, in payment13
+    return render(request,"payment13.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payment13.html
+2024-07-16 11:11:15,592 ERROR basehttp "POST /payment13 HTTP/1.1" 500 101433
+2024-07-16 11:17:15,491 ERROR log Internal Server Error: /payment13
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 168, in payment13
+    return HttpResponse(template.render(context,request))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+2024-07-16 11:17:15,493 ERROR basehttp "POST /payment13 HTTP/1.1" 500 125046
+2024-07-16 11:26:13,765 ERROR log Internal Server Error: /payment13
+Traceback (most recent call last):
+  File "D:\project\harshada\holiday\views.py", line 156, in payment13
+    user = Sign_up.objects.using("project_user").get(username=username)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+holiday.models.Sign_up.DoesNotExist: Sign_up matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 158, in payment13
+    messages.error("Invalid Username")
+TypeError: error() missing 1 required positional argument: 'message'
+2024-07-16 11:26:13,767 ERROR basehttp "POST /payment13 HTTP/1.1" 500 86843
+2024-07-16 11:27:01,174 ERROR log Internal Server Error: /payment13
+Traceback (most recent call last):
+  File "D:\project\harshada\holiday\views.py", line 156, in payment13
+    user = Sign_up.objects.using("project_user").get(username=username)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+holiday.models.Sign_up.DoesNotExist: Sign_up matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 158, in payment13
+    messages.error("Invalid Username")
+TypeError: error() missing 1 required positional argument: 'message'
+2024-07-16 11:27:01,174 ERROR basehttp "POST /payment13 HTTP/1.1" 500 86833
+2024-07-16 12:15:05,426 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-16 12:15:05,453 ERROR log Internal Server Error: /Dashboard
+2024-07-16 12:15:05,453 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-16 15:11:57,189 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-16 15:11:57,190 ERROR log Internal Server Error: /Dashboard
+2024-07-16 15:11:57,190 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-16 16:16:49,720 ERROR exception Invalid HTTP_HOST header: '192.168.7.116:8001'. You may need to add '192.168.7.116' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.7.116:8001'. You may need to add '192.168.7.116' to ALLOWED_HOSTS.
+2024-07-17 09:54:55,066 ERROR exception Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2024-07-17 09:54:55,408 ERROR exception Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2024-07-17 17:20:51,465 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:20:51,466 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:20:51,466 ERROR log Internal Server Error: /storage
+2024-07-17 17:20:51,467 ERROR log Internal Server Error: /storage
+2024-07-17 17:20:51,468 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-17 17:22:08,561 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:22:08,561 ERROR log Internal Server Error: /storage
+2024-07-17 17:22:08,565 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:22:08,566 ERROR log Internal Server Error: /storage
+2024-07-17 17:22:08,566 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-17 17:23:00,006 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:23:00,007 ERROR log Internal Server Error: /storage
+2024-07-17 17:23:00,013 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:23:00,013 ERROR log Internal Server Error: /storage
+2024-07-17 17:23:00,013 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-17 17:23:19,464 ERROR log Internal Server Error: /storage
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 131, in storage
+    return render(request,"storage.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:23:19,464 ERROR log Internal Server Error: /storage
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 131, in storage
+    return render(request,"storage.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:23:19,467 ERROR basehttp "GET /storage HTTP/1.1" 500 128209
+2024-07-17 17:29:03,765 ERROR log Internal Server Error: /storage
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 131, in storage
+    return render(request,"storage.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:29:03,777 ERROR log Internal Server Error: /storage
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 131, in storage
+    return render(request,"storage.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:29:03,781 ERROR basehttp "GET /storage HTTP/1.1" 500 128209
+2024-07-18 16:00:37,199 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\project\harshada\holiday\views.py", line 79, in login
+    return render(request, "Base.html" ,{'user':user})
+UnboundLocalError: local variable 'user' referenced before assignment
+2024-07-18 16:00:37,200 ERROR basehttp "GET / HTTP/1.1" 500 69997
+2024-07-18 16:16:29,581 ERROR decorators An error occurred in view storage: Reverse for 'proceed_to_payment' not found. 'proceed_to_payment' is not a valid view function or pattern name.
+2024-07-18 16:16:29,582 ERROR log Internal Server Error: /storage
+2024-07-18 16:16:29,582 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 16:16:30,750 ERROR decorators An error occurred in view storage: Reverse for 'proceed_to_payment' not found. 'proceed_to_payment' is not a valid view function or pattern name.
+2024-07-18 16:16:30,750 ERROR log Internal Server Error: /storage
+2024-07-18 16:16:30,751 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 16:16:31,412 ERROR decorators An error occurred in view storage: Reverse for 'proceed_to_payment' not found. 'proceed_to_payment' is not a valid view function or pattern name.
+2024-07-18 16:16:31,412 ERROR log Internal Server Error: /storage
+2024-07-18 16:16:31,412 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:12,577 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:12,577 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:12,577 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:13,639 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:13,639 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:13,639 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:22,229 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:22,229 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:22,229 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:23,005 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:23,005 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:23,006 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:23,415 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:23,416 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:23,416 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:23,734 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:23,734 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:23,734 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:24,004 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:24,005 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:24,005 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:24,259 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:24,260 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:24,260 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:24,516 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:24,516 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:24,517 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:37,773 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:37,773 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:37,776 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:37,776 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:37,776 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-19 12:18:47,607 ERROR decorators An error occurred in view login: Unclosed tag on line 228: 'for'. Looking for one of: empty, endfor.
+2024-07-19 12:18:47,607 ERROR log Internal Server Error: /
+2024-07-19 12:18:47,607 ERROR basehttp "GET / HTTP/1.1" 500 33
+2024-07-19 12:18:58,767 ERROR decorators An error occurred in view login: Unclosed tag on line 228: 'for'. Looking for one of: empty, endfor.
+2024-07-19 12:18:58,767 ERROR log Internal Server Error: /
+2024-07-19 12:18:58,768 ERROR basehttp "GET / HTTP/1.1" 500 33
+2024-07-19 17:46:09,939 ERROR decorators An error occurred in view login: name 'user' is not defined
+2024-07-19 17:46:09,940 ERROR log Internal Server Error: /
+2024-07-19 17:46:09,941 ERROR basehttp "GET / HTTP/1.1" 500 33
+=======
+2024-07-06 12:46:58,376 ERROR decorators An error occurred in view Menu: name 'bhbkjnjn' is not defined
+2024-07-06 12:46:58,376 ERROR log Internal Server Error: /Menu
+2024-07-06 12:46:58,377 ERROR basehttp "GET /Menu HTTP/1.1" 500 33
+2024-07-08 11:27:08,455 ERROR log Internal Server Error: /Dashboard
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view holiday.views.Dashboard didn't return an HttpResponse object. It returned None instead.
+2024-07-08 11:27:08,455 ERROR basehttp "GET /Dashboard HTTP/1.1" 500 70644
+2024-07-08 11:40:14,029 ERROR decorators An error occurred in view otp_expire: name 'otp' is not defined
+2024-07-08 11:40:14,029 ERROR log Internal Server Error: /otp_expire
+2024-07-08 11:40:14,029 ERROR basehttp "GET /otp_expire HTTP/1.1" 500 33
+2024-07-08 11:42:48,253 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-08 11:42:48,253 ERROR log Internal Server Error: /Dashboard
+2024-07-08 11:42:48,254 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-08 11:42:50,208 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-08 11:42:50,208 ERROR log Internal Server Error: /Dashboard
+2024-07-08 11:42:50,208 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-08 11:42:51,183 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-08 11:42:51,183 ERROR log Internal Server Error: /Dashboard
+2024-07-08 11:42:51,183 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-08 11:43:15,268 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-08 11:43:15,268 ERROR log Internal Server Error: /Dashboard
+2024-07-08 11:43:15,268 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-08 15:10:33,560 ERROR decorators An error occurred in view payment13: payment13() missing 1 required positional argument: 'username'
+2024-07-08 15:10:33,560 ERROR log Internal Server Error: /payment13
+2024-07-08 15:10:33,560 ERROR basehttp "GET /payment13 HTTP/1.1" 500 33
+2024-07-08 16:15:47,383 ERROR decorators An error occurred in view payment13: name 'mobile' is not defined
+2024-07-08 16:15:47,383 ERROR log Internal Server Error: /payment13
+2024-07-08 16:15:47,383 ERROR basehttp "POST /payment13 HTTP/1.1" 500 33
+2024-07-09 12:21:06,047 ERROR decorators An error occurred in view payment13: name 'mobile' is not defined
+2024-07-09 12:21:06,048 ERROR log Internal Server Error: /payment13
+2024-07-09 12:21:06,048 ERROR basehttp "POST /payment13 HTTP/1.1" 500 33
+2024-07-12 11:01:58,447 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:01:58,447 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:01:58,447 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:16,643 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:16,643 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:16,643 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:23,522 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:23,522 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:23,522 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:23,929 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:23,929 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:23,929 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:32,993 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:32,993 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:32,993 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-12 11:02:51,971 ERROR decorators An error occurred in view delete_table1: [Errno 13] Permission denied: 'D:/project/harshada/TABLE DATA/Data_12-07-2024.xlsx'
+2024-07-12 11:02:51,971 ERROR log Internal Server Error: /delete_table1
+2024-07-12 11:02:51,971 ERROR basehttp "GET /delete_table1 HTTP/1.1" 500 33
+2024-07-15 17:22:39,289 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:24:14,021 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:26:01,308 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:26:09,425 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:27:38,201 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:33:33,010 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:34:11,470 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:36:06,169 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:37:32,107 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:44:28,468 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:47:53,493 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:49:50,020 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:51:27,365 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:56:04,824 ERROR decorators An error occurred in view payment13: _wrapped_view() missing 1 required positional argument: 'request'
+2024-07-15 17:56:04,824 ERROR log Internal Server Error: /payment13
+2024-07-15 17:56:04,825 ERROR basehttp "POST /payment13 HTTP/1.1" 500 33
+2024-07-15 17:57:10,664 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-15 17:58:09,413 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-15 17:58:09,413 ERROR log Internal Server Error: /Dashboard
+2024-07-15 17:58:09,414 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-15 17:58:10,618 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-15 17:58:10,618 ERROR log Internal Server Error: /Dashboard
+2024-07-15 17:58:10,618 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-15 17:58:44,473 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 09:57:49,421 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:04:19,009 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:06:13,388 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-16 10:06:13,388 ERROR log Internal Server Error: /Dashboard
+2024-07-16 10:06:13,388 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-16 10:06:39,548 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:08:27,366 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:10:32,908 ERROR decorators An error occurred in view otp_genrator: _wrapper_view() missing 1 required positional argument: 'request'
+2024-07-16 10:33:58,113 ERROR decorators An error occurred in view otp_expire: name 'otp' is not defined
+2024-07-16 10:33:58,113 ERROR log Internal Server Error: /otp_expire
+2024-07-16 10:33:58,113 ERROR basehttp "GET /otp_expire HTTP/1.1" 500 33
+2024-07-16 11:10:11,336 ERROR decorators An error occurred in view payment13: payment13.html
+2024-07-16 11:10:11,336 ERROR log Internal Server Error: /payment13
+2024-07-16 11:10:11,336 ERROR basehttp "POST /payment13 HTTP/1.1" 500 33
+2024-07-16 11:11:15,590 ERROR log Internal Server Error: /payment13
+Traceback (most recent call last):
+  File "D:\project\harshada\holiday\views.py", line 156, in payment13
+    user = Sign_up.objects.using("project_user").get(username=username)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+holiday.models.Sign_up.DoesNotExist: Sign_up matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 159, in payment13
+    return render(request,"payment13.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: payment13.html
+2024-07-16 11:11:15,592 ERROR basehttp "POST /payment13 HTTP/1.1" 500 101433
+2024-07-16 11:17:15,491 ERROR log Internal Server Error: /payment13
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 168, in payment13
+    return HttpResponse(template.render(context,request))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'otp_verification' not found. 'otp_verification' is not a valid view function or pattern name.
+2024-07-16 11:17:15,493 ERROR basehttp "POST /payment13 HTTP/1.1" 500 125046
+2024-07-16 11:26:13,765 ERROR log Internal Server Error: /payment13
+Traceback (most recent call last):
+  File "D:\project\harshada\holiday\views.py", line 156, in payment13
+    user = Sign_up.objects.using("project_user").get(username=username)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+holiday.models.Sign_up.DoesNotExist: Sign_up matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 158, in payment13
+    messages.error("Invalid Username")
+TypeError: error() missing 1 required positional argument: 'message'
+2024-07-16 11:26:13,767 ERROR basehttp "POST /payment13 HTTP/1.1" 500 86843
+2024-07-16 11:27:01,174 ERROR log Internal Server Error: /payment13
+Traceback (most recent call last):
+  File "D:\project\harshada\holiday\views.py", line 156, in payment13
+    user = Sign_up.objects.using("project_user").get(username=username)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+holiday.models.Sign_up.DoesNotExist: Sign_up matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 158, in payment13
+    messages.error("Invalid Username")
+TypeError: error() missing 1 required positional argument: 'message'
+2024-07-16 11:27:01,174 ERROR basehttp "POST /payment13 HTTP/1.1" 500 86833
+2024-07-16 12:15:05,426 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-16 12:15:05,453 ERROR log Internal Server Error: /Dashboard
+2024-07-16 12:15:05,453 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-16 15:11:57,189 ERROR decorators An error occurred in view Dashboard: name 'otp' is not defined
+2024-07-16 15:11:57,190 ERROR log Internal Server Error: /Dashboard
+2024-07-16 15:11:57,190 ERROR basehttp "POST /Dashboard HTTP/1.1" 500 33
+2024-07-16 16:16:49,720 ERROR exception Invalid HTTP_HOST header: '192.168.7.116:8001'. You may need to add '192.168.7.116' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.7.116:8001'. You may need to add '192.168.7.116' to ALLOWED_HOSTS.
+2024-07-17 09:54:55,066 ERROR exception Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2024-07-17 09:54:55,408 ERROR exception Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\http\request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2024-07-17 17:20:51,465 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:20:51,466 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:20:51,466 ERROR log Internal Server Error: /storage
+2024-07-17 17:20:51,467 ERROR log Internal Server Error: /storage
+2024-07-17 17:20:51,468 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-17 17:22:08,561 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:22:08,561 ERROR log Internal Server Error: /storage
+2024-07-17 17:22:08,565 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:22:08,566 ERROR log Internal Server Error: /storage
+2024-07-17 17:22:08,566 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-17 17:23:00,006 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:23:00,007 ERROR log Internal Server Error: /storage
+2024-07-17 17:23:00,013 ERROR decorators An error occurred in view storage: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:23:00,013 ERROR log Internal Server Error: /storage
+2024-07-17 17:23:00,013 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-17 17:23:19,464 ERROR log Internal Server Error: /storage
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 131, in storage
+    return render(request,"storage.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:23:19,464 ERROR log Internal Server Error: /storage
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 131, in storage
+    return render(request,"storage.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:23:19,467 ERROR basehttp "GET /storage HTTP/1.1" 500 128209
+2024-07-17 17:29:03,765 ERROR log Internal Server Error: /storage
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 131, in storage
+    return render(request,"storage.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:29:03,777 ERROR log Internal Server Error: /storage
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\project\harshada\holiday\views.py", line 131, in storage
+    return render(request,"storage.html")
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_form' not found. 'payment_form' is not a valid view function or pattern name.
+2024-07-17 17:29:03,781 ERROR basehttp "GET /storage HTTP/1.1" 500 128209
+2024-07-18 16:00:37,199 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\publicApplication_19_12_23_hanumanta\PubAppEnv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\project\harshada\holiday\views.py", line 79, in login
+    return render(request, "Base.html" ,{'user':user})
+UnboundLocalError: local variable 'user' referenced before assignment
+2024-07-18 16:00:37,200 ERROR basehttp "GET / HTTP/1.1" 500 69997
+2024-07-18 16:16:29,581 ERROR decorators An error occurred in view storage: Reverse for 'proceed_to_payment' not found. 'proceed_to_payment' is not a valid view function or pattern name.
+2024-07-18 16:16:29,582 ERROR log Internal Server Error: /storage
+2024-07-18 16:16:29,582 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 16:16:30,750 ERROR decorators An error occurred in view storage: Reverse for 'proceed_to_payment' not found. 'proceed_to_payment' is not a valid view function or pattern name.
+2024-07-18 16:16:30,750 ERROR log Internal Server Error: /storage
+2024-07-18 16:16:30,751 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 16:16:31,412 ERROR decorators An error occurred in view storage: Reverse for 'proceed_to_payment' not found. 'proceed_to_payment' is not a valid view function or pattern name.
+2024-07-18 16:16:31,412 ERROR log Internal Server Error: /storage
+2024-07-18 16:16:31,412 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:12,577 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:12,577 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:12,577 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:13,639 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:13,639 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:13,639 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:22,229 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:22,229 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:22,229 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:23,005 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:23,005 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:23,006 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:23,415 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:23,416 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:23,416 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:23,734 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:23,734 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:23,734 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:24,004 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:24,005 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:24,005 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:24,259 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:24,260 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:24,260 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:24,516 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:24,516 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:24,517 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-18 17:11:37,773 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:37,773 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:37,776 ERROR decorators An error occurred in view storage: Unclosed tag on line 130: 'if'. Looking for one of: elif, else, endif.
+2024-07-18 17:11:37,776 ERROR log Internal Server Error: /storage
+2024-07-18 17:11:37,776 ERROR basehttp "GET /storage HTTP/1.1" 500 33
+2024-07-19 12:18:47,607 ERROR decorators An error occurred in view login: Unclosed tag on line 228: 'for'. Looking for one of: empty, endfor.
+2024-07-19 12:18:47,607 ERROR log Internal Server Error: /
+2024-07-19 12:18:47,607 ERROR basehttp "GET / HTTP/1.1" 500 33
+2024-07-19 12:18:58,767 ERROR decorators An error occurred in view login: Unclosed tag on line 228: 'for'. Looking for one of: empty, endfor.
+2024-07-19 12:18:58,767 ERROR log Internal Server Error: /
+2024-07-19 12:18:58,768 ERROR basehttp "GET / HTTP/1.1" 500 33
+2024-07-19 17:46:09,939 ERROR decorators An error occurred in view login: name 'user' is not defined
+2024-07-19 17:46:09,940 ERROR log Internal Server Error: /
+2024-07-19 17:46:09,941 ERROR basehttp "GET / HTTP/1.1" 500 33
+>>>>>>> 591af9b (Initial commit)

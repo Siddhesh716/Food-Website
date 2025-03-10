@@ -1,0 +1,114 @@
+----------------------------------------------------------------------------    Project Modules     --------------------------------------------------------------------------------------
+
+*** from datetime import datetime, time
+    These are used for handling date and time objects in Python.
+
+*** from django.shortcuts import render, redirect
+    Render is used to generate an HTTP response with a template, and redirect is used to redirect the user to a different URL.
+
+*** from .models import MisPoint, MisPointKdmc, MisPointMbmc, Suid_login
+    Imports specific models (MisPoint, MisPointKdmc, MisPointMbmc, Suid_login) from the current application’s models module. These models represent the database tables.
+
+*** from django.http import HttpResponse
+    Imports HttpResponse class from Django’s http module. This class is used to create an HTTP response object.
+
+*** from django.template import loader
+    Imports loader from Django's template module. This is used to load and render templates.
+
+*** from django.http import JsonResponse
+    Imports JsonResponse class from Django’s http module. This class is used to create a JSON-encoded HTTP response.
+
+*** from django.views.decorators.csrf import csrf_exempt, csrf_protect
+    These decorators are used to control CSRF (Cross-Site Request Forgery) protection on views.
+
+*** from django.contrib import messages
+    Imports messages module from Django’s contrib package. This is used to send one-time notifications to users.
+
+*** import random
+    Imports Python's built-in random module, which provides functions to generate random numbers.
+
+*** from json import dumps
+    Imports the dumps function from the json module. This function converts Python objects into JSON strings.
+
+*** from PIL import Image, UnidentifiedImageError
+    PIL(Python Imaging Library) module. Image is used to work with images, and UnidentifiedImageError is an exception for handling errors when the image cannot be identified.
+
+*** import os, shutil
+    os provides functions for interacting with the operating system, and shutil provides functions for file operations like copying and removing files.
+
+*** import json
+    Imports Python's built-in json module, which provides functions for working with JSON data.
+
+*** import requests
+    Imports the requests library, which is used for making HTTP requests.
+
+*** import pandas as pd
+    Imports the pandas library with an alias pd. pandas is used for data manipulation and analysis.
+
+*** from .decorators import log_errors
+    Imports the log_errors decorator from the current application’s decorators module. This decorator is used to log errors that occur in the decorated function.
+
+
+-------------------------------------------------------------------------------   Project Libraries    -------------------------------------------------------------------------------------
+
+*** Django 4.2.8:
+    Developed robust web applications using Django, leveraging its ORM, URL routing, and template engine for efficient back-end development.
+    I designed models to represent the data structure for menu items, user profiles, and transactions.
+    URL routing was implemented to create a seamless navigation experience, and the template engine was used to dynamically render content based on user interactions.
+
+*** GDAL 3.2.3:
+    Processed and analyzed geographic data, integrated spatial data operations into web applications.
+    
+*** numpy 1.26.3:
+    Utilized numpy for efficient numerical computations, matrix operations, and handling large datasets.
+    NumPy was employed to perform data analysis on large datasets, such as sales data, user interactions, and menu performance.
+    Numerical computations helped in generating statistics and insights for better decision-making. 
+
+*** pandas 2.1.4:
+    Manipulated and analyzed data with pandas, performing data cleaning, transformation, and aggregation.
+    Pandas was used to clean and transform raw data, ensuring it was analysis-ready.
+    Aggregation operations were performed to summarize sales data, user activity, and other key metrics.
+    Data export features, such as downloading reports in Excel and PDF formats, were also implemented using Pandas.    
+
+*** Pillow 10.1.0:
+    Managed image processing tasks, including resizing, format conversion, and handling image files.
+    Using Pillow, I converted images between various formats such as JPEG, PNG, and GIF. Functions like save() with different format parameters were used for this purpose
+    This provided users with the ability to upload, edit, and download images seamlessly.
+
+*** pip 21.1.1:
+    Managed Python packages and dependencies, ensuring a consistent and reproducible environment.
+    Commands such as pip install --upgrade to add and update packages efficiently,ensuring that all dependencies were met and the latest features and security updates were applied
+    By creating virtual environments with venv or virtualenv, I ensured that each project had its own isolated environment.
+    I used pip to manage packages within these environments, preventing conflicts between different projects' dependencies.
+
+*** psycopg2 2.9.9:
+    Connected to PostgreSQL databases, executed queries, and managed transactions for data storage and retrieval.
+    By using the connect function with appropriate connection parameters (host, database, user, password), I created secure and stable connections to the database.
+    I executed SQL statements such as SELECT, INSERT, UPDATE, and DELETE.
+
+*** qrcode 7.4.2:
+    Generated and customized QR codes for various applications, including embedding information and URLs.
+    By leveraging the QRCode class and make method, I created QR codes that encode URLs, text, and other information.
+    I encoded data directly into the QR code using the add_data method. This included URLs for quick access to web pages.
+    I used methods like make_image() to generate the QR code image and save it in various formats such as PNG and SVG.
+    I also integrated QR code generation into web applications, allowing users to download or view QR codes directly from the website.
+
+*** requests 2.31.0:
+    Made HTTP requests for interacting with external APIs, fetching data, and integrating third-party services.
+    By authenticating requests with API keys, tokens. I securely accessed services such as payment gateways.
+    I handled authentication and authorization processes to ensure secure and reliable integrations.
+
+*** sqlparse 0.4.4:
+    Parsed, formatted, and validated SQL queries to improve readability and maintainability of database operations.
+
+*** XlsxWriter 3.1.9:
+    Created and customized Excel files, including formatting, and data validation for reporting and data export purposes.
+    I used XlsxWriter to create Excel files for User information.
+    I populated Excel sheets with data from various sources, including databases and CSV files.
+    I used XlsxWriter functions to format the data, create charts, and summarize key metrics."
+
+*** html2pdf:
+    Implemented PDF generation and download functionality using javascript, providing users with downloadable PDF reports and documents.
+    By integrating html2pdf with JavaScript, I captured the content of HTML elements(such as information) and converted them into PDF format.
+    I adjusted styles, fonts, and formatting to ensure that the PDF output resembled the original HTML content.
+    This included setting up headers, footers, and page breaks to organize content effectively.
